@@ -1,0 +1,477 @@
+* Force Field Parameter File for seryl-adenylate
+*
+
+
+BOND PARAMETERS 
+ 
+ON3  P      580.0       1.48    !DMP, ADM Jr.
+ON2  P      270.0       1.60    !DMP, ADM Jr. 
+CN7  ON6B   240.0       1.480   ! From CN7  ON6
+CN7B ON6B   260.0       1.420   ! From CN7B ON6
+CN7B ON5    428.0       1.400   ! check adm jr., 
+ON5   HN5    545.0       0.960  !RIBOSE, MeOH
+CN7  ON5    428.0       1.42    !From CN8 ON2, adm jr., 8/30/98
+! C1'-N9 (purines)/C1'-N1 (pyrimidines)
+CN8B ON2    320.0       1.44    ! From exp
+
+ON2   C     239.00  1.4000 ! substitued C OH1 bond!!
+
+O    C     620.000     1.2300 ! ALLOW   PEP POL ARO
+                ! Peptide geometry, condensed phase (LK)
+OH1  CT2   428.000     1.4200 ! ALLOW   ALI ALC ARO
+                ! methanol vib fit EMB 11/21/89
+OH1  H     545.000     0.9600 ! ALLOW   ALC ARO
+                ! EMB 11/21/89 methanol vib fit
+CN7B NN2    220.0       1.456   !A/C
+CN5  NN2    300.0       1.375   !A, adm jr. 11/97
+CN4  NN2    320.0       1.374   !A, adm jr. 11/97
+CN5  NN4    310.0       1.355   !A, adm jr. 11/97
+CN4  NN4    400.0       1.305   !G,A, adm jr. 11/97
+CN5  NN3A   350.0       1.312   !A, JWK par_a8 9/30/91
+CN4  NN3A   420.0       1.322   !A, adm jr. 11/97
+CN2  NN3A   400.0       1.342   !A, adm jr. 11/97
+CN2  NN1    360.0       1.366   !C,A,G JWK, adm jr. 10/2/91
+HN1  NN1    488.0       1.00    !A,C,G, JWK, adm jr. 7/24/91
+NH3  CT1   200.000     1.4800 ! ALLOW   ALI POL
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+NH3  HC    403.000     1.0400 ! ALLOW   POL
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+CN7B CN7B   200.0       1.450   ! 
+CN7  CN7B   222.5       1.460   ! Specific to RNA 
+CN7B HN7    309.0       1.111   ! From CN8  HN7 (NF)
+CN7  CN7    222.5       1.529  	! From exp 
+CN7  HN7    309.0       1.111   !Alkanes, sacred
+CN7  CN8B   222.5       1.512   ! From exp. 
+CN8B  HN8    309.0       1.111  !Alkanes, sacred
+CN5  CN5    310.0       1.361   !A, adm jr. 11/97
+CN4  HN3    380.0       1.09    !G,A, JWK par_a7 9/30/91
+CN2  CN5    360.0       1.358   !A, adm jr. 11/97
+CT1  C     250.000     1.4900 ! ALLOW   ALI PEP POL ARO
+                ! Ala Dipeptide ab initio calc's (LK) fixed from 10/90 (5/91)
+CT2  CT1   222.500     1.5380 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+HB   CT1   330.000     1.0800 ! ALLOW   PEP
+                ! Alanine Dipeptide ab initio calc's (LK)
+HA   CT2   309.000     1.1110 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+
+ 
+ ANGLE PARAMETERS 
+ 
+CN8B ON2  P        20.0    120.0   35.00   2.33 !NF, 11/97, C5'O5'P
+ON6B CN7  CN8B     90.0    108.2  ! 
+CN7  CN7  ON6B    100.0    110.0   ! From CN7  CN7  ON6
+HN7  CN7  ON6B     45.2    107.24  !
+ON6B CN7B NN2    110.0     112.0  !C/A RNA
+ON6B CN7B CN7B     90.0    106.0   ! 030998 
+HN7  CN7B ON6B     45.2    107.24  !
+ON5  CN7B CN7B     80.0    108.4  ! 
+ON5  CN7B CN7      90.0    108.0  ! 
+HN7  CN7B ON5      60.0    109.5  !
+ON5  CN7  CN7      75.7    110.1  ! 
+ON5  CN7  CN7B     90.0    110.0  ! From ON5  CN7  CN8
+HN7  CN7  ON5      60.0    109.5  ! 
+ON2  P    ON3      98.9    111.6  !DMP, adm jr.
+CN7  CN8B ON2      70.0    108.4  !NF, 11/97, C4'C5'O5'
+HN8  CN8B ON2      60.0    109.5  ! From HN7  CN8  ON2
+
+CT1   C   ON2   55.000    109.00   20.00   2.32600 ! ALLOW POL PEP !! from OS CD CT1**
+                ! adm jr., 4/05/91, for PRES CT1 from methylacetate
+
+O  C   ON2    50.000    123.00  210.00   2.26200 ! ALLOW   PEP POL ARO ALC !! from OH1 CD OB**
+                ! adm jr, 10/17/90, acetic acid vibrations
+
+ON3  P    ON3     120.0    120.0  !DMP, adm jr.
+O    C    CT1    80.000   121.0000 ! ALLOW   ALI PEP POL ARO
+                ! Alanine Dipeptide ab initio calc's (LK)
+OH1  CT2  CT1    75.700   110.1000 ! ALLOW   ALI ALC ARO
+                ! MeOH, EMB, 10/10/89
+OH1  CT2  HA     45.900   108.8900 ! ALLOW   ALI ALC ARO
+                ! MeOH, EMB, 10/10/89
+CN7B CN7B NN2    110.0     111.0  !C/A, RNA
+HN7  CN7B NN2     43.0     111.0  !
+NN2  CN5  NN3A   100.0     126.9  !bridgeC4
+CN5  CN5  NN2    100.0     105.7  !5R) bridgeC4
+NN2  CN4  HN3     39.0     121.8  !
+NN2  CN4  NN4    100.0     113.4  !5R)
+CN2  CN5  NN4    100.0     129.0  !bridgeC5
+CN5  CN5  NN4    100.0     110.0  !5R) bridgeC5
+NN4  CN4  HN3     39.0     124.8  !h8, G,A
+CN5  CN5  NN3A    60.0     127.4  !6R) bridgeC4
+NN3A CN4  NN3A    60.0     133.0  !6R)
+HN3  CN4  NN3A    38.0     113.5  !h2
+NN3A CN2  NN1     50.0     130.7  !n6
+CN5  CN2  NN3A    60.0     110.7  !6R)
+CN5  CN2  NN1     50.0     118.6  !
+NH3  CT1  CT2    67.700   110.0000 ! ALLOW   ALI POL
+                ! new aliphatics, adm jr., 2/3/92
+NH3  CT1  C      43.700   110.0000 ! ALLOW   PEP POL ARO ALI
+                ! new aliphatics, adm jr., 2/3/92
+NH3  CT1  HB     51.500   107.5000 ! ALLOW   ALI POL PEP
+                ! new aliphatics, adm jr., 2/3/92
+CN7B CN7B HN7      33.4    110.10  22.53   2.179 ! following terms directly
+CN7B CN7  CN7      60.0    100.0    8.00   2.561  !NF, 11/97, C2'C3'C4'
+HN7  CN7  CN7B     34.53   110.10  22.53   2.179
+HN5  ON5  CN7B     57.5    109.0  !
+CN7  CN7  CN8B     45.0    110.0  !NF, 11/97, C3'C4'C5'
+HN7  CN7  CN7      40.0    108.00  !
+CN7B CN7B CN7     110.0     96.0   ! 
+HN7  CN7B CN7      34.53   110.10  22.53   2.179
+HN5  ON5  CN7      57.5    109.0  ! 
+CN7  ON6B CN7B    110.0    115.0   ! From CN7  ON6  CN7B
+CN5  NN2  CN7B    45.0     126.1  !A
+CN4  NN2  CN7B    45.0     127.6  !A
+HN8  CN8B CN7      34.53   110.1   22.53   2.179  ! Alkanes, sacred
+HN7  CN7  CN8B     34.5    110.1   22.53   2.179 ! From HN7  CN7  CN8
+CN4  NN2  CN5    100.0     106.3  !5R)
+CN4  NN3A CN5     90.0     110.1  !6R)
+CN2  CN5  CN5     60.0     121.0  !6R) bridgeC5
+CN4  NN4  CN5    120.0     104.6  !5R)
+CN2  NN1  HN1     40.0     121.5  !h61,h62, C,A,G
+CN2  NN3A CN4     90.0     117.8  !6R) adm jr. 11/97
+CT2  CT1  C      52.000   108.0000 ! ALLOW   ALI PEP POL ARO
+                ! Alanine Dipeptide ab initio calc's (LK)
+HB   CT1  C      50.000   109.5000 ! ALLOW  PEP
+                ! Alanine Dipeptide ab initio calc's (LK)
+HA   CT2  CT1   33.430    110.10   22.53   2.17900 ! ALLOW   ALI
+                ! alkane frequencies (MJF), alkane geometries (SF)
+HC   NH3  CT1   30.000    109.50   20.00   2.07400 ! ALLOW   POL ALI
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+HB   CT1  CT2    35.000   111.0000 ! ALLOW  PEP
+                ! Alanine Dipeptide ab initio calc's (LK)
+H    OH1  CT2    57.500   106.0000 ! ALLOW   ALC ARO ALI
+                ! methanol vib fit EMB 11/21/89
+HN1  NN1  HN1     31.0     117.0  !C,A,G
+HC   NH3  HC     44.000   109.5000 ! ALLOW   POL
+                ! new stretch and bend; methylammonium (KK 03/10/92)
+HN8  CN8B HN8      35.5    109.0    5.40   1.802  ! Alkanes, sacred
+HA   CT2  HA    35.500    109.00    5.40   1.80200 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+
+ 
+ DIHEDRAL PARAMETERS 
+ 
+CN7  CN8B ON2  P        0.2     1       120.0 !bet C4'-C5'-O5'-P, adm jr.
+! the following differ significantly from the alcohols
+P    ON2  CN8B HN8      0.000   3     0.0  !dmp,beta, H-C5'-O5'-P
+ON6B CN7  CN8B ON2      3.4     1       180.0 !gam, RNA
+! When O5' is ON5 (5TER patch):
+HN8  CN8B CN7  ON6B     0.195   1         0.0 !gam, RNA
+CN7B CN7  CN7  ON6B      0.0     3         0.0 ! RNA
+ON5  CN7  CN7  ON6B      0.4     6        0.0 !RNA
+HN7  CN7  CN7  ON6B      0.195    3     180.0 ! RNA
+ON6B CN7B NN2  CN5       1.1     1       180.0 !
+ON6B CN7B NN2  CN4       1.1     1         0.0 !
+CN7  CN7B CN7B ON6B      0.4     6         0.0 ! RNA
+ON6B CN7B CN7B ON5        0.000   3       0.0
+HN7  CN7B CN7B ON6B      0.195    3       0.0 ! RNA, H-C2'-C1'-O4'
+NN2  CN7B CN7B ON5      0.000    3       0.0 ! Adenine and cytosine
+ON5  CN7B CN7B HN7       0.000   3       0.0 ! 
+CN7  CN7  CN7B ON5        0.000   3       0.0
+ON5  CN7B CN7  ON5        0.000   3       0.0
+HN7  CN7  CN7B ON5       0.195   3         0.0
+ON5  CN7  CN7  CN8B      0.2      4       0.0 !
+HN7  CN7  CN7  ON5       0.195   3         0.0
+ON5  CN7  CN7B CN7B      0.6     6         0.0 ! RNA, c2/c3 endo
+ON5  CN7  CN7B HN7       0.195   3       180.0 ! RNA
+CN7  CN7  CN8B ON2      0.20    4       180.0 !gam adm jr.
+HN7  CN7  CN8B ON2      0.195	3         0.0 !gam H-C4'-C5'-O5'
+
+ON2    C    CT1  CT2      1.4000  1     0.00 !   ALLOW PEP !! from O C CT1 CT2 **
+                ! ala dipeptide update for new C VDW Rmin, adm jr., 3/3/93c
+
+!ON2    C    CT1  NH3      0.0000  1     0.00 ! ALLOW PEP PRO !! from O C CT1 NH3, alternate for below.
+                ! Backbone parameter set made complete RLD 8/8/90
+
+ON2    C    CT1  NH3      3.2000  2   180.00 ! ALLOW PEP PRO !! other option for above, from OC CC CT1 NH3
+                ! adm jr. 4/17/94, zwitterionic glycine
+
+ON2    C    CT1  HB       0.0000  1     0.00 !   ALLOW PEP !! from O C CT1 HB **
+                ! Alanine Dipeptide ab initio calc's (LK)
+
+ON3  P    ON2  CN8B     0.10    3     0.0  !dmp,bet, O1P-P-O5'-C5'
+O    C    CT1  CT2      1.4000  1     0.00 !   ALLOW PEP
+                ! ala dipeptide update for new C VDW Rmin, adm jr., 3/3/93c
+O    C    CT1  NH3      0.0000  1     0.00 ! ALLOW PEP PRO
+                ! Backbone parameter set made complete RLD 8/8/90
+O    C    CT1  HB       0.0000  1     0.00 !   ALLOW PEP
+                ! Alanine Dipeptide ab initio calc's (LK)
+X    CT1  CT2  X        0.2000  3     0.00 ! ALLOW   ALI
+                ! alkane update, adm jr., 3/2/92
+CN7  ON6B CN7B NN2       0.0     3         0.0
+CN7  CN7B CN7B NN2       0.0     3         0.0
+HN7  CN7B CN7B NN2       0.0     3         0.0
+CN4  NN3A CN5  NN2      2.0     2   180.0  !A
+CN2  CN5  CN5  NN2      7.0     2   180.0  !A
+NN2  CN5  CN5  NN4     14.0     2   180.0  ! treated 2x
+CN5  NN4  CN4  NN2     14.0     2   180.0  ! 
+NN4  CN5  CN2  NN1      0.0     2   180.0  ! N6
+NN3A CN2  CN5  NN4      2.0     2   180.0  !A
+NN3A CN5  CN5  NN4      7.0     2   180.0  !A, adm jr. 11/97
+CN7B NN2  CN4  NN4      11.0     2       180.0 ! adm jr.
+NN4  CN4  NN2  CN5      6.0     2   180.0  ! 
+X    CN5  NN2  X        1.5     2   180.0  !
+NN3A CN5  NN2  CN4      2.0     2   180.0  !A
+! Guanine 
+NN3A CN5  CN5  CN2      2.0     2   180.0  ! treated 2x
+CN2  NN3A CN4  NN3A     1.8     2   180.0  ! adm jr. 11/97, 6-mem
+NN3A CN4  NN3A CN5      2.0     2   180.0  ! 
+NN3A CN2  NN1  HN1      0.5     2   180.0  ! 
+! Butterfly motion
+CN5  CN5  CN2  NN3A     1.8     2   180.0  ! 
+CN5  CN5  CN2  NN1      4.0     2   180.0  ! N6
+CN4  NN3A CN2  NN1      4.0     2   180.0  ! N6
+CN7B CN7B ON6B CN7       0.0     6         0.0 ! RNA, Lowers barrier
+CN7B CN7B NN2  CN5       0.3     3         0.0 ! NF
+CN7B CN7B NN2  CN4       0.0     3       180.0 ! NF
+CN7B CN7  CN7  CN8B     0.2     4       180.0 !del, RNA
+HN7  CN7  CN7  CN7B      0.195   3         0.0
+CN7B CN7  ON5  HN5       0.8     3         0.0 ! RNA
+HN8  CN8B CN7  CN7      0.195   3         0.0 !gam,H-C5'-C4'-H
+CN7  CN7  ON6B CN7B      0.0      6      180.0 ! RNA
+HN7  CN7B CN7B CN7       0.195    3       0.0 ! RNA, H-C1'-C2'-C3'
+HN5  ON5  CN7B CN7        0.300   3       0.0 ! 030298
+CN7B ON6B CN7  CN8B      2.0     3         0.0 ! To lower barrier in RNA
+HN7  CN7  ON6B CN7B      0.195    3       0.0 ! RNA
+CN7B NN2  CN5  CN5      11.0     2       180.0 ! adm jr.
+CN7B NN2  CN4  HN3       0.3     2       180.0 ! NF
+CN7B CN7B CN7  CN7       0.0      6        0.0 ! RNA
+HN7  CN7  CN7B CN7B      0.195    3       0.0 ! RNA, H-C3'-C2'-C1'
+HN5  ON5  CN7B CN7B       0.000   6     180.0 !
+HN7  CN7B ON6B CN7       0.000    3       0.0 ! RNA
+HN7  CN7B CN7  CN7       0.195   3         0.0
+CN7  CN7  ON5  HN5       0.5     3         0.0
+HN7  CN7  CN7  CN8B      0.195   3         0.0 !gam H-C3'-C4'-C5'
+HN7  CN7B NN2  CN5       0.0     3         0.0 ! NF
+CN5  NN2  CN4  HN3      5.2     2   180.0  ! H8
+CN5  NN3A CN4  HN3      8.5     2   180.0  ! H2
+CN5  CN5  NN4  CN4      6.0     2   180.0  ! 5-mem
+HN7  CN7B NN2  CN4       0.195   3         0.0 ! NF
+CN4  NN2  CN5  CN5      6.0     2   180.0  !
+CN2  CN5  NN4  CN4      2.0     2   180.0  !A
+CN5  CN2  NN1  HN1      0.5     2   180.0  ! 6-NH2
+CN5  CN2  NN3A CN4     10.0     2   180.0  ! 
+CN5  NN4  CN4  HN3      5.2     2   180.0  ! H8
+CN4  NN3A CN5  CN5      1.8     2   180.0  ! 
+CN2  NN3A CN4  HN3      8.5     2   180.0  ! H2
+X    CT1  NH3  X        0.1000  3     0.00 ! ALLOW   ALI POL
+                ! 0.715->0.10 METHYLAMMONIUM (KK)
+H    OH1  CT2  CT1      1.3000  1     0.00 ! ALLOW ALC
+                ! ethanol OH hf/6-31g* torsional surface, adm jr., 3/2/93
+HN7  CN7B ON5  HN5        0.000   3       0.0
+! the following differ significantly from the protein based
+HN7  CN7  ON5  HN5       0.0     3         0.0
+X    CT2  OH1  X        0.1400  3     0.00 ! ALLOW   ALI ALC ARO
+                ! EMB  11/21/89 methanol vib fit
+HN7  CN7B CN7B HN7       0.000   3       0.0 ! 
+HN7  CN7  CN7B HN7       0.195   3         0.0
+HN7  CN7  CN7  HN7       0.195    3       0.0 !H-C4'-C3'-H
+HN7  CN7  CN8B HN8       0.195   3         0.0 !gam H-C4'-C5'-H
+
+
+
+!! begin paste from c8a_0904.prm file for impropers and nonbonded
+
+IMPROPER
+!
+!V(improper) = Kpsi(psi - psi0)**2
+!
+!Kpsi: kcal/mole/rad**2
+!psi0: degrees
+!note that the second column of numbers (0) is ignored
+!
+!atom types           Kpsi                   psi0
+!
+!! THESE ARE ADDED FROM Aleksandrov et al. 2011 (PMID: 21387031) RATULC
+C    S    CE2  OH1   120.0000         0      0.0000
+!!
+
+CPB  CPA  NPH  CPA    20.8000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+CPB  X    X    CE1    90.0000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): substituents (KK 05/13/91)
+CT2  X    X    CPB    90.0000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): substituents (KK 05/13/91)
+CT3  X    X    CPB    90.0000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): substituents (KK 05/13/91)
+!HA   C    C    HA     20.0000         0      0.0000 ! ALLOW   PEP POL ARO
+                ! Heme vinyl substituent (KK, from propene (JCS))
+HA   CPA  CPA  CPM    29.4000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+!HA   CPB  C    C      20.0000         0      0.0000 ! ALLOW HEM ARO
+                ! Heme (6-liganded): substituents (KK 05/13/91)
+!HA   HA   C    C      20.0000         0    180.0000 ! ALLOW   PEP POL ARO
+                ! Heme vinyl substituent (KK, from propene (JCS))
+HE2  HE2  CE2  CE2     3.0            0      0.00   ! 
+                ! for ethene, yin/adm jr., 12/95
+HR1  NR1  NR2  CPH2    0.5000         0      0.0000 ! ALLOW ARO
+                ! his, adm jr., 7/05/90
+HR1  NR2  NR1  CPH2    0.5000         0      0.0000 ! ALLOW ARO
+                ! his, adm jr., 7/05/90
+HR3  CPH1 NR1  CPH1    0.5000         0      0.0000 ! ALLOW ARO
+                ! adm jr., 3/24/92, maintain old aliphatic H VDW params
+HR3  CPH1 NR2  CPH1    0.5000         0      0.0000 ! ALLOW ARO
+                ! adm jr., 3/24/92, maintain old aliphatic H VDW params
+HR3  CPH1 NR3  CPH1    1.0000         0      0.0000 ! ALLOW ARO
+                ! adm jr., 3/24/92, maintain old aliphatic H VDW params
+HR3  NR1  CPH1 CPH1    0.5000         0      0.0000 ! ALLOW ARO
+                ! adm jr., 3/24/92, maintain old aliphatic H VDW params
+HR3  NR2  CPH1 CPH1    0.5000         0      0.0000 ! ALLOW ARO
+                ! adm jr., 3/24/92, maintain old aliphatic H VDW params
+N    C    CP1  CP3     0.0000         0      0.0000 ! ALLOW PRO
+                ! 6-31g* AcProNH2 and ProNH2  RLD 5/19/92
+NC2  X    X    C      40.0000         0      0.0000 ! ALLOW   PEP POL ARO
+                ! 5.75->40.0 GUANIDINIUM (KK)
+NH1  X    X    H      20.0000         0      0.0000 ! ALLOW   PEP POL ARO
+                ! NMA Vibrational Modes (LK)
+NH2  X    X    H       4.0000         0      0.0000 ! ALLOW   POL
+                ! adm jr., 8/13/90 acetamide geometry and vibrations
+NPH  CPA  CPA  FE    137.4000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+NPH  CPA  CPB  CPB    40.6000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+NPH  CPA  CPM  CPA    18.3000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+NPH  CPM  CPB  CPA    32.7000         0      0.0000 ! ALLOW HEM
+                ! Heme (6-liganded): porphyrin macrocycle (KK 05/13/91)
+NR1  CPH1 CPH2 H       0.4500         0      0.0000 ! ALLOW ARO
+                ! his, adm jr., 7/05/90
+NR1  CPH2 CPH1 H       0.4500         0      0.0000 ! ALLOW ARO
+                ! his, adm jr., 7/05/90
+NR3  CPH1 CPH2 H       1.2000         0      0.0000 ! ALLOW ARO
+                ! his, adm jr., 6/27/90
+NR3  CPH2 CPH1 H       1.2000         0      0.0000 ! ALLOW ARO
+                ! his, adm jr., 6/27/90
+NY   CA   CY   CPT   100.0000         0      0.0000 ! ALLOW ARO
+                !adm jr., 5/15/91,  indole 3-21G HE1 out-of-plane surf.
+O    CP1  NH2  CC     45.0000         0      0.0000 ! ALLOW PEP POL PRO
+                ! 6-31g* AcProNH2 and ProNH2  RLD 5/19/92
+O    CT1  NH2  CC     45.0000         0      0.0000 ! ALLOW PEP POL
+                ! adm jr., 8/13/90 acetamide geometry and vibrations
+O    CT2  NH2  CC     45.0000         0      0.0000 ! ALLOW PEP POL
+                ! adm jr., 8/13/90 acetamide geometry and vibrations
+O    CT3  NH2  CC     45.0000         0      0.0000 ! ALLOW PEP POL
+                ! adm jr., 8/13/90 acetamide geometry and vibrations
+O    HA   NH2  CC     45.0000         0      0.0000 ! ALLOW PEP POL PRO
+                ! adm jr., 5/13/91, formamide geometry and vibrations
+O    N    CT2  CC    120.0000         0      0.0000 ! ALLOW PEP POL PRO
+                ! 6-31g* AcProNH2 and ProNH2  RLD 5/19/92
+O    NH2  CP1  CC     45.0000         0      0.0000 ! ALLOW PEP POL PRO
+                ! 6-31g* AcProNH2 and ProNH2  RLD 5/19/92
+O    NH2  CT1  CC     45.0000         0      0.0000 ! ALLOW PEP POL
+                ! adm jr., 8/13/90 acetamide geometry and vibrations
+O    NH2  CT2  CC     45.0000         0      0.0000 ! ALLOW PEP POL
+                ! adm jr., 8/13/90 acetamide geometry and vibrations
+O    NH2  CT3  CC     45.0000         0      0.0000 ! ALLOW PEP POL
+                ! adm jr., 8/13/90 acetamide geometry and vibrations
+O    NH2  HA   CC     45.0000         0      0.0000 ! ALLOW PEP POL
+                ! adm jr., 5/13/91, formamide geometry and vibrations
+O    X    X    C     120.0000         0      0.0000 ! ALLOW   PEP POL ARO
+                ! NMA Vibrational Modes (LK)
+OB   X    X    CD    100.0000         0      0.0000 ! ALLOW   ALC ARO POL
+                ! adm jr., 10/17/90, acetic acid vibrations
+OC   X    X    CC     96.0000         0      0.0000 ! ALLOW   PEP POL ARO ION
+                ! 90.0->96.0 acetate, single impr (KK)
+CC   X    X    CT1    96.0000         0      0.0000 ! ALLOW   PEP POL ARO ION
+                ! 90.0->96.0 acetate, single impr (KK)
+CC   X    X    CT2    96.0000         0      0.0000 ! ALLOW   PEP POL ARO ION
+                ! 90.0->96.0 acetate, single impr (KK)
+CC   X    X    CT3    96.0000         0      0.0000 ! ALLOW   PEP POL ARO ION
+                ! 90.0->96.0 acetate, single impr (KK)
+!NA section
+HN2  X    X    NN2      1.0     0     0.0     !C, adm jr. 11/97
+NN2B CN4  CN5  HN2      7.0     0     0.0     !G, adm jr. 11/97
+NN2G CN4  CN1  HN2      0.8     0     0.0     !Inosine, adm jr. 2/94
+HN1  X    X    NN1      4.0     0     0.0     !G, adm jr. 11/97
+NN1  CN2  HN1  HN1      6.0     0     0.0     !A,C adm jr. 11/97
+CN1  X    X    ON1     90.0     0     0.0     !U
+CN1T X    X    ON1     90.0     0     0.0     !U
+CN1  NN2G CN5G ON1     90.0     0     0.0     !G
+CN1T NN2B NN2U ON1    110.0     0     0.0     !T/O2, adm jr. 11/97
+CN1  NN2U CN3T ON1     90.0     0     0.0     !T/O4, adm jr. 11/97
+CN1  X    X    ON1C    80.0     0     0.0     !C, par_32, adm jr. 10/2/91
+CN2  X    X    NN1     90.0     0     0.0     !C, 
+CN2  NN3G NN2G NN1     40.0     0     0.0     !G
+CN2  NN3A CN5  NN1     40.0     0     0.0     !A
+CN2  NN3  CN3  NN1     60.0     0     0.0     !C, 
+CN4  NN2G NN3I HN3     39.0     0     0.0     !Inosine, adm jr. 2/94
+CN9  X    X    CN3T    14.0     0     0.0     !T, adm jr. 11/97
+! nicotinamide adenine dinucleotide                                             
+CN3  CN3C CN8  HN6     15.0     0     0.0  !nich, jjp1/adm jr.
+HN3B X    X    CN3     15.0     0     0.0  !nad/ppi, jjp1/adm jr.
+HN3B X    X    CN3A    13.0     0     0.0  !nad/ppi, jjp1/adm jr.
+HN3B X    X    CN3B    13.0     0     0.0  !nad/ppi, jjp1/adm jr.
+HN2  CN3  CN3B NN2     50.0     0     0.0  !nad/ppi, jjp1/adm jr.
+HN1  HN1  CN1A NN1     -5.0     0     0.0  !nad/ppi, jjp1/adm jr.
+ON1  X    X    CN1A    40.0     0     0.0  !nad/ppi, jjp1/adm jr.
+HN3  X    X    CN3C    53.0     0     0.0  !nad/ppi, jjp1/adm jr.
+HN6  X    X    CN3C    53.0     0     0.0  !nich, adm jr.
+HN8  CN3  CN3  CN8     18.0     0     0.0  !nad/ppi, jjp1/adm jr.
+!================== new terms added for sugar model compounds =========
+!----------------------- Added for imidazole --------------------
+!HR1  NR1  NR2  CPH2    0.50         0      0.00 ! From imidazole (NF)
+!HR1  NR2  NR1  CPH2    0.50         0      0.00 ! From imidazole (NF)
+!HR3  CPH1 NR1  CPH1    0.50         0      0.00 ! From imidazole (NF)
+!HR3  CPH1 NR2  CPH1    0.50         0      0.00 ! From imidazole (NF)
+!HR3  NR1  CPH1 CPH1    0.50         0      0.00 ! From imidazole (NF)
+!HR3  NR2  CPH1 CPH1    0.50         0      0.00 ! From imidazole (NF)
+!NR1  CPH1 CPH2 CN7B    0.60         0      0.00 ! From imidazole (NF), k increased
+!NR1  CPH2 CPH1 CN7B    0.60         0      0.00 ! From imidazole (NF), k increased
+!! END OF IMPROPER
+
+
+
+NONBONDED nbxmod  5 atom cdiel shift vatom vdistance vswitch -
+cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5 
+                !adm jr., 5/08/91, suggested cutoff scheme
+!
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!
+!epsilon: kcal/mole, Eps,i,j = sqrt(eps,i * eps,j)
+!Rmin/2: A, Rmin,i,j = Rmin/2,i + Rmin/2,j
+!
+!atom  ignored    epsilon      Rmin/2   ignored   eps,1-4       Rmin/2,1-4
+!
+C      0.000000  -0.110000     2.000000 ! ALLOW   PEP POL ARO
+CN2      0.0       -0.10      1.9000
+CN4      0.0       -0.075     1.9000
+CN5      0.0       -0.075     1.9000
+CN7      0.0       -0.02      2.275  0.0   -0.01 1.90 !equivalent to protein CT1
+CN7B     0.0       -0.02      2.275  0.0   -0.01 1.90 !equivalent to protein CT1
+CN8B     0.0       -0.0560    2.010  0.0   -0.01 1.90 !
+CN9      0.0       -0.0780    2.040  0.0   -0.01 1.90 !
+CT1    0.000000  -0.020000     2.275000   0.000000  -0.010000     1.900000 ! ALLOW   ALI
+CT2    0.000000  -0.055000     2.175000   0.000000  -0.010000     1.900000 ! ALLOW   ALI
+CT3    0.000000  -0.080000     2.060000   0.000000  -0.010000     1.900000 ! ALLOW   ALI
+H      0.000000  -0.046000     0.224500 ! ALLOW PEP POL SUL ARO ALC
+HA     0.000000  -0.022000     1.320000 ! ALLOW PEP ALI POL SUL ARO PRO ALC
+HN1      0.0       -0.0460    0.2245
+HN3      0.0       -0.046     1.1000 !adm jr. aromatic Hvdw
+HN5      0.0       -0.0460    0.2245
+HN7      0.0       -0.0220    1.3200
+HN8      0.0       -0.0280    1.3400 ! Hydrogen bound to CN8
+HN9      0.0       -0.0240    1.3400 ! Hydrogen bound to CN9
+NH1    0.000000  -0.200000     1.850000   0.000000  -0.200000     1.550000 ! ALLOW   PEP POL ARO
+NN1      0.0        -0.20     1.85
+NN2      0.0        -0.20     1.85
+NN3A     0.0        -0.20     1.85
+NN4      0.0        -0.20     1.85
+O      0.000000  -0.120000     1.700000   0.000000  -0.120000     1.400000 ! ALLOW   PEP POL
+OH1    0.000000  -0.152100     1.770000 ! ALLOW   ALC ARO
+ON2      0.0       -0.1521    1.77
+ON3      0.0       -0.1200    1.70
+ON5      0.0       -0.1521    1.77
+ON6B     0.0       -0.1521    1.77
+P        0.0       -0.585     2.15
+S      0.000000  -0.450000     2.000000 ! ALLOW   SUL ION
+
+
+NONBONDED nbxmod  5 atom cdiel shift vatom vdistance vswitch -
+cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5 
+
+!! END OF NON-BONDED
+
+
+
+END
+

@@ -1,0 +1,129 @@
+* CHARMM topology file for seryl-adenylate
+
+! Created by John Brezovec of CDM lab, 2018
+
+MASS     1 NH3   14.00700 N ! ammonium nitrogen
+MASS     2 HC     1.00800 H ! N-ter H
+MASS     3 CT1   12.01100 C ! aliphatic sp3 C for CH
+MASS     4 HB     1.00800 H ! backbone H
+MASS     5 CT2   12.01100 C ! aliphatic sp3 C for CH2
+MASS     6 HA     1.00800 H ! nonpolar H
+MASS     7 OH1   15.99900 O ! hydroxyl oxygen
+MASS     8 H      1.00800 H ! polar H
+MASS     9 C     12.01100 C ! carbonyl C, peptide backbone
+MASS    10 O     15.99900 O ! carbonyl oxygen
+MASS    11 P    30.974000 P ! phosphorus
+MASS    12 ON3  15.999400 O ! Nucleic acid =O in phosphate 
+MASS    13 ON2  15.999400 O ! Nucleic acid phosphate ester oxygen
+MASS    14 CN7  12.011000 C ! Nucleic acid carbon (equivalent to protein CT1)
+MASS    15 HN7   1.008000 H ! Nucleic acid proton (equivalent to protein HA)
+MASS    16 ON6B 15.999400 O ! Nucleic acid ribose ring oxygen
+MASS    17 CN7B 12.011000 C ! Nucleic acid aliphatic carbon for C1'
+MASS    18 ON5  15.999400 O ! Nucleic acid ribose hydroxyl oxygen
+MASS    19 HN5   1.008000 H ! Nucleic acid ribose hydroxyl proton
+MASS    20 NN2  14.007000 N ! Nucleic acid protonated ring nitrogen
+MASS    21 CN5  12.011000 C ! Nucleic acid purine C4 and C5
+MASS    22 NN4  14.007000 N ! Nucleic acid purine N7
+MASS    23 CN4  12.011000 C ! Nucleic acid purine C8 and ADE C2  
+MASS    24 HN3   1.008000 H ! Nucleic acid aromatic carbon proton
+MASS    25 NN3A 14.007000 N ! Nucleic acid unprotonated ring nitrogen, ade N1 and N3
+MASS    26 CN2  12.011000 C ! Nucleic acid aromatic carbon to amide
+MASS    27 HN1   1.008000 H ! Nucleic acid amine proton
+MASS    28 NN1  14.007000 N ! Nucleic acid amide nitrogen
+MASS    29 HN8   1.008000 H ! Bound to CN8 in nucleic acids/model compounds
+MASS    30 CN8B 12.011000 C ! Nucleic acid carbon (equivalent to protein CT2)
+
+
+
+RESI SMP         0.00 !! Seryl-Adenylate, at physiological pH, integer charge
+
+GROUP ! Serine    1.00 
+ATOM NH2  NH3    -0.30 ! from standard N-terminus; changed nickname
+ATOM HN1  HC      0.33 !         HN1    
+ATOM HN2  HC      0.33 !     (+)/
+ATOM HN3  HC      0.33 ! --CA--NH2-HN2
+ATOM CA   CT1     0.21 !   |    \
+ATOM HA   HB      0.10 !   HA    HN3
+
+ATOM CB   CT2     0.05  ! from SER residue
+ATOM HB1  HA      0.09  !
+ATOM HB2  HA      0.09  !       
+ATOM OG   OH1    -0.66  !     
+ATOM HG1  H       0.43
+
+ATOM C    C       0.51
+ATOM O    O      -0.41  ! manually changed from -0.51 to -0.41 to make integer charge
+
+GROUP ! Phosphate
+ATOM P    P       1.500  ! from RESI DMPA (Dimethylphosphate)
+ATOM O2P  ON3    -0.780  !
+ATOM O1P  ON3    -0.780  ! 
+ATOM O5'  ON2    -0.570  !
+ATOM O3P  ON2    -0.570  !
+
+GROUP ! Ribose
+ATOM C5'  CN8B   -0.08  !
+ATOM H5'  HN8     0.09  !        
+ATOM H52  HN8     0.09  !       
+
+ATOM C4'  CN7     0.16  ! from RESI ADE, expanded_topology.rtf (unless stated)      
+ATOM H4'  HN7     0.09  !          
+ATOM O4'  ON6B   -0.50  !                   
+ATOM C1'  CN7B    0.16  !                       
+ATOM H1'  HN7     0.09  !
+
+ATOM C2'  CN7B    0.14
+ATOM H22  HN7     0.09
+ATOM O2'  ON5    -0.66 
+ATOM H2'  HN5     0.43
+
+ATOM C3'  CN7     0.14  ! from 3' terminal HYDROXYL patch (from MeOH)
+ATOM H3'  HN7     0.09 
+ATOM O3'  ON5    -0.66
+ATOM H3T  HN5     0.43
+
+GROUP ! Adenine Base 0.00
+ATOM N9   NN2    -0.05  ! from RESI ADE, expanded_topology.rtf (unless stated)    
+ATOM C5   CN5     0.28  !      
+ATOM N7   NN4    -0.71  !        
+ATOM C8   CN4     0.34  !      
+ATOM H8   HN3     0.12  !         
+ATOM N1   NN3A   -0.74  !             
+ATOM C2   CN4     0.50  !                  
+ATOM H2   HN3     0.13  !                          
+ATOM N3   NN3A   -0.75  
+ATOM C4   CN5     0.43  
+ATOM C6   CN2     0.46  
+ATOM N6   NN1    -0.77  
+ATOM H61  HN1     0.38  
+ATOM H62  HN1     0.38 
+
+
+! from ADE RESI in expanded_topology
+BOND P    O1P       P    O2P       P     O5'      O3P  C
+BOND O5'  C5'       C5'  C4'       C4'  O4'       C4'  C3'       O4'  C1'
+BOND C1'  N9        C1'  C2'       N9   C4        N9   C8        C4   N3
+BOND C2   N1        C6   N6
+BOND N6   H61       N6   H62       C6   C5        C5   N7
+BOND C2'  C3'       C2'  O2'       O2'  H2'       C3'  O3'       O3'  H3T
+BOND C1'  H1'       C2'  H22       C3'  H3'       C4'  H4'       C5'  H5'
+BOND C5'  H52       C8   H8        C2   H2
+DOUBLE  N1  C6      C2   N3        C4   C5        N7   C8
+! from SER RESI in expanded_topology, atom names modified
+BOND CB CA     OG CB     NH2  CA    NH2  HN2    NH2    HN1
+BOND C  CA     CA HA     CB   HB1   CB   HB2    OG     HG1
+DOUBLE   O  C    
+
+IMPR N6   C6   H61  H62        
+IMPR C6   N1   C5   N6
+
+IC O3P P O5' C5' 0.00 0.00 0.00 0.00 0.00
+
+
+ 
+    
+    
+
+
+
+
